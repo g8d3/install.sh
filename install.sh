@@ -85,4 +85,8 @@ sudo apt-get install -y vim vim-gnome
 
 # TODO install hub
 
+# generate ssh key
+
+# add ssh key to github
+
 
