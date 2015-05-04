@@ -59,6 +59,7 @@ gem i pg
 # nvm, iojs
 
 curl https://raw.githubusercontent.com/creationix/nvm/v0.25.1/install.sh | bash
+# TODO find out why is failing here
 
 # load nvm
 write_once 'export NVM_DIR="$HOME/.nvm"' ~/.zshrc
