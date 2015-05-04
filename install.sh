@@ -30,7 +30,7 @@ sudo -u postgres psql -c "ALTER USER postgres WITH PASSWORD '$pg_pass';"
 
 # TODO config git
 
-
+# TODO ignore globally ignorable files
 
 # zsh
 
@@ -40,6 +40,8 @@ sudo chsh -s /bin/zsh `whoami`
 # oh-my-zsh
 
 curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
+
+# TODO select oh-my-zsh plugins
 
 # rvm, rails
 
