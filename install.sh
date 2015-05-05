@@ -92,4 +92,4 @@ sudo apt-get install -y vim vim-gnome
 
 # add ssh key to github
 
-
+# elastic search
