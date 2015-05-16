@@ -1,10 +1,3 @@
-# exit if any command throws error
-set -e
-
-# vars
-
-pg_pass=${pg_pass:-123} # development password
-
 # functions
 write_once(){
 string=$1
@@ -18,43 +11,15 @@ else
 fi
 }
 
-# adding repos and updating
-
-sudo add-apt-repository -y ppa:webupd8team/sublime-text-3
-#apt-get update
-
-# git, postgres, shutter 
-sudo apt-get install -y git shutter
-sudo apt-get install -y postgresql postgresql-contrib pgadmin3
-sudo -u postgres psql -c "ALTER USER postgres WITH PASSWORD '$pg_pass';"
-
-# config git
-
-git config --global user.email "pastasjuan@gmail.com"
-git config --global user.name "Juan Pastas"
-git config --global push.default simple
-
-# TODO ignore globally ignorable files
-
-# zsh
-
-sudo apt-get install -y zsh
-sudo chsh -s /bin/zsh `whoami`
-
-# oh-my-zsh
-
-curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
-# this fails with PAM auth failure
-
-# TODO select oh-my-zsh plugins
-
-# rvm, rails
-
+# rvm
 gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 --yes
-\curl -sSL https://get.rvm.io | bash -s stable --ruby --gems=rails
+\curl -sSL https://get.rvm.io | bash -s stable --ruby
 write_once '[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"' ~/.zshrc
 source ~/.rvm/scripts/rvm
 write_once 'gem: --no-rdoc --no-ri' ~/.gemrc
+
+# rails
+gem i rails
 
 # pg gem dependency
 
@@ -79,9 +44,9 @@ nvm alias default iojs
 curl https://install.meteor.com/ | sh
 
 # chrome
-sudo apt-get install libxss1 libappindicator1 libindicator7
-wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-sudo dpkg -i google-chrome*.deb
+#sudo apt-get install libxss1 libappindicator1 libindicator7
+#wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+#sudo dpkg -i google-chrome*.deb
 
 # sublime text
 
