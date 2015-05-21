@@ -29,6 +29,7 @@ sudo apt-get install -y postgresql postgresql-contrib pgadmin3
 sudo -u postgres psql -c "ALTER USER postgres WITH PASSWORD '$pg_pass';"
 
 # config git
+# TODO receive email and name from user
 
 git config --global user.email "pastasjuan@gmail.com"
 git config --global user.name "Juan Pastas"
