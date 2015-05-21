@@ -1,3 +1,6 @@
+# exit when error
+set -e
+
 # functions
 write_once(){
 string=$1
