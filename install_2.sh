@@ -1,18 +1,8 @@
+# TODO create isolated tests, for source command changes
+source include/write_once.sh
+
 # exit when error
 set -e
-
-# functions
-write_once(){
-string=$1
-file=$2
-
-if ! grep -qc "$string" "$file"; then
-  echo "=> Appending $string to $file"
-  printf "\n$string\n" >> "$file"
-else
-  echo "=> $string already in $file"
-fi
-}
 
 # rvm
 gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 --yes
