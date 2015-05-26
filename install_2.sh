@@ -48,14 +48,3 @@ sudo apt-get install -y sublime-text-installer
 # vim vim-gnome
 
 sudo apt-get install -y vim vim-gnome
-
-# TODO install hub
-
-# generate ssh key
-
-# add ssh key to github
-
-# elastic search
-
-# autosave sublime
-# install packages sublime
