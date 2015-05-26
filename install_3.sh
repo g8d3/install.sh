@@ -12,13 +12,15 @@ sudo ln -fs /opt/hub-linux-amd64-2.2.1/hub /bin
 
 # generate ssh key
 
-# ssh-keygen -t rsa -N "" -f ~/.ssh/id_rsa
+ssh-keygen -t rsa -N "" -f ~/.ssh/id_rsa
 
 # TODO add ssh key to github
 
 # TODO elastic search
+# https://www.elastic.co/downloads/elasticsearch
+sudo apt-get install -y openjdk-7-jre
 
-
+# Elasticsearch plugins: head, hq
 
 # autosave sublime
 
