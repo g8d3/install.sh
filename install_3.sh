@@ -12,6 +12,7 @@ sudo ln -fs /opt/hub-linux-amd64-2.2.1/hub /bin
 
 # generate ssh key
 
+# will fail if not overwriten, if previous key
 ssh-keygen -t rsa -N "" -f ~/.ssh/id_rsa
 
 # TODO add ssh key to github
