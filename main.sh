@@ -6,3 +6,4 @@ bash others.sh
 bash heroku.sh
 bash clipboard_history.sh
 bash video.sh
+bash bitbucket.sh
