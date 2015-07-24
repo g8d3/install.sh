@@ -10,6 +10,11 @@ curl -L $hub_url -o hub.tar.gz
 sudo tar -xvf hub.tar.gz -C /opt
 sudo ln -fs /opt/hub-linux-amd64-2.2.1/hub /bin
 
+# install gist
+gem install gist
+# TODO login to gist
+# echo "user\npass" | gist --login
+
 # generate ssh key
 
 # will fail if not overwriten, if previous key
